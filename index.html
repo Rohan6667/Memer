@@ -1,0 +1,1949 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>memer797 • Movies Home Page</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png"><link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png"><meta name="msapplication-config" content="/browserconfig.xml"><link rel="manifest" href="/site.webmanifest"><link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5"><meta name="msapplication-TileImage" content="/mstile-150x150.png"><link rel="shortcut icon" href="favicon.ico">
+
+  <meta property="og:title" content="memer797 • All Movie In One Place">
+  <meta property="og:site_name" content="memer797">
+  <meta property="og:description" content="Explore a vast library of free movies, captivating web series, and exclusive premium content. Start streaming now and unlock a world of cinematic wonders.">
+  <meta property="og:image" content="favicon.ico">
+  <meta property="og:url" content="https://memer797.onrender.com">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <style>
+    #trending {
+      background-color: transparent;
+    }
+    #trending .movie-container {
+      margin: 10px;
+      text-align: center;
+      background-color: transparent;
+      width: 150px;
+    }
+    #trending .movie-image {
+      width: 100%;
+      height: 32.68%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .new-section .movies-container .movie-container .movie-image {
+      border-radius: 4px;
+    }
+    .leftright-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    .left-side {
+      flex: 1;
+    }
+    .right-side {
+      flex: 1;
+      text-align: right;
+    }
+    .see-all {
+      color: #4285f4;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    .see-all:hover {
+      color: #e50914;
+    }
+    .new-section {
+      overflow-x: auto;
+      white-space: nowrap;
+      text-align: left;
+      margin-top: 3px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .new-section .section-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+    .leftright-container .left-side .section-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .new-section .movie-container {
+      display: inline-block;
+      margin-right: 7px;
+      text-align: center;
+      width: 135px;
+      height: auto;
+    }
+    .new-section .movie-image {
+      width: 100%;
+      height: 80px;
+      object-fit: cover;
+    }
+    .new-section .movie-container .movie-name {
+      margin-top: 5px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #fff;
+      overflow-wrap: break-word;
+    }
+  </style>
+</head>
+
+<body>
+  <style>
+    header {
+  background-color: #252525;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px; /* Adjusted padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  height: 40px; /* Added fixed height */
+}
+
+    header img {
+      width: 100px;
+      height: auto;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      width: 40px;
+      height: 40px; 
+      margin-right: 10px; 
+    }
+    .logo img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+    .menu-icon {
+      font-size: 24px; 
+      cursor: pointer;
+      color: #fff; 
+      transition: color 0.3s ease; 
+    }
+    .menu-icon:hover {
+      color: #e50914; 
+    }
+    nav {
+      display: none;
+      background-color: #141414;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+      animation-name: slideIn;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideOut {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+    }
+    
+    nav a {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    }
+    
+    nav a svg {
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+  }
+
+    nav a:hover {
+      background-color: #333; 
+      color: #e50914;
+    }
+    
+    
+    
+    .search-container {
+      background-color: #252525;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 65px;
+    }
+    .search-input {
+      padding: 12px;
+      font-size: 16px;
+      border: 0.5px solid gray;
+      background-color: #555;
+      color: #fff;
+      border-radius: 25px;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0 0 10px 0px transparent;
+      margin-left: 10px;
+      flex: 1;
+    }
+    .search-input:focus {
+      box-shadow: 0 0 10px 0px #e50914;
+    }
+    .search-icon {
+      font-size: 20px;
+      color: #4285f4;
+      margin-left: 10px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .login-container {
+      text-align: right;
+    }
+    .login-button {
+      background-color: #e50914;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .loading {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .obj {
+      width: 6px;
+      height: 0px;
+      margin: 0 3px;
+      border-radius: 10px;
+      animation: loading 1.4s infinite;
+    }
+    .obj:nth-child(2){
+      animation-delay: 0.15s;
+    }
+    .obj:nth-child(3){
+      animation-delay: 0.3s;
+    }
+    .obj:nth-child(4){
+      animation-delay: 0.45s;
+    }
+    .obj:nth-child(5){
+      animation-delay: 0.6s;
+    }
+    .obj:nth-child(6){
+      animation-delay: 0.75s;
+    }
+    .obj:nth-child(7){
+      animation-delay: 0.9s;
+    }
+    .obj:nth-child(8){
+      animation-delay: 1.05s;
+    }
+    @keyframes loading {
+      0% {
+        height: 0;
+        background-color: #ff0080;
+      }
+      50% {
+        height: 50px;
+        background-color: #02f006;
+      }
+      100% {
+        height: 0;
+        background-color: cyan;
+      }
+    }
+    /* Dropdown Styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      color: #fff;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #141414;
+      min-width: 160px;
+      z-index: 1;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 8px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .dropdown-content a:hover {
+      background-color: #333;
+      color: #e50914;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropbtn {
+      color: #e50914;
+    }
+    
+    .dropbtn {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none; /* Remove the border */
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  color: #e50914;
+}
+
+  </style>
+
+
+  <div id="kbt" style="width: 100%; position: fixed; z-index: 999; padding-bottom: 5px; margin-bottom: 0px !important;">
+    <header>
+      <div class="logo-container">
+        <div class="logo">
+          <img src="images/android-chrome-512x512.png" alt="Your Logo">
+        </div>
+        <div class="logo-text">movies74u</div>
+      </div>
+      <div class="dropdown">
+        <button id="selectedOption" class="dropbtn">All ▼</button>
+        <div class="dropdown-content">
+          <a href="/" onclick="setSelectedOption('All')">All</a>
+          <a href="/movie" onclick="setSelectedOption('Movies')">Movies</a>
+          <a href="/webseries" onclick="setSelectedOption('Web series')">Web series</a>
+          <a href="/anime" onclick="setSelectedOption('Anime')">Anime</a>
+        </div>
+      </div>
+      <div class="menu-icon">☰</div>
+    </header>
+
+    <nav>
+      <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"></path>
+    </svg>
+  Home
+  </a>
+      <a onclick="searchClicked()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+</svg>Search</a>
+      <a href="/see-all"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+  <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"></path>
+</svg>All Movies</a>
+      <a href="/contact-us"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"></path>
+</svg>Contact Us</a>
+      <a href="/about-us"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"></path>
+  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"></path>
+</svg>About Us</a>
+      <a href="/privacy-policy"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5"></path>
+</svg>Privacy Policy</a>
+      <a onclick="submitFeedback()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+  <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5"></path>
+</svg>Feedback</a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+  <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"></path>
+</svg>Chat Room (very soon)</a>
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-raised-hand" viewBox="0 0 16 16">
+  <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"></path>
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
+</svg>Support Chat</a>
+
+ <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
+</svg>Profile</a>
+
+
+    </nav>
+
+    <div class="search-container">
+      <input onkeydown="searchOnEnter(event)" type="search" class="search-input" id="searchInput" onfocus="sop()" placeholder="">
+      <span style="padding: 6px; font-size: 13px;" onclick="performSearch()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+</svg></span>
+    </div>
+    <div style="background-color: #252525; width: 99%; margin: 0 auto; height: auto; max-height: 160px; border: gold 1px solid; border-radius: 8px; margin-top: 4px; display: none; color: white; overflow-y: auto;" id="sugsug"></div>
+  </div>
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', function () {
+      if (nav.style.display === 'block') {
+        nav.style.animationName = 'slideOut';
+        setTimeout(() => { nav.style.display = 'none'; }, 500);
+        menuIcon.innerHTML = '☰';
+      } else {
+        nav.style.display = 'block';
+        nav.style.animationName = 'slideIn';
+        menuIcon.innerHTML = '✖';
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      const isClickInsideMenu = nav.contains(event.target);
+      const isClickOnMenuIcon = menuIcon.contains(event.target);
+
+      if (!isClickInsideMenu && !isClickOnMenuIcon) {
+        nav.style.animationName = 'slideOut';
+        setTimeout(() => { nav.style.display = 'none'; }, 500);
+        menuIcon.innerHTML = '☰';
+      }
+    });
+
+    document.getElementById('searchInput').addEventListener('focus', function() {
+      this.placeholder = '';
+    });
+
+    document.getElementById('searchInput').addEventListener('blur', function() {
+      this.placeholder = 'Search...';
+    });
+
+    function searchOnEnter(event) {
+      if (event.key === "Enter") {
+        performSearch();
+      }
+    }
+
+    function performSearch() {
+      var searchTerm = document.getElementById('searchInput').value;
+      console.log('Search term:', searchTerm);
+      if (!searchTerm || searchTerm.trim() === "") return;
+
+      window.location.href = `https://memer797.onrender.com/search/${searchTerm}`;
+    }
+
+    var searchQ = document.getElementById("searchInput");
+    var sugDiv = document.querySelector("#sugsug");
+    let searchTimeout;
+    searchQ.addEventListener("input", async() => {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(getSuggestion, 200);
+    });
+
+    function getSuggestion() {
+      if (searchQ.value.trim() === "") {
+        sugDiv.style.display = "none";
+        return;
+      };
+      sugDiv.style.display = "block";
+      sugDiv.innerHTML = `<div style='margin-top: 8px; margin: 0 auto;' class='loading'><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div><div class='obj'></div></div>`;
+      console.log(searchQ.value);
+      fetch(`https://memer797.onrender.com/suggest?q=${searchQ.value}`).then(h => h.json()).then(ardata => {
+        sugDiv.innerHTML = "";
+        sugDiv.style.display = "block";
+        ardata.forEach(ss => {
+          sugDiv.innerHTML += `<strong><a href="https://memer797.onrender.com/download/${(ss.name).replace(/ /g, '-')}" style="display: block; color: white; margin-bottom: 3px; padding: 3px; margin-left: 10px; -webkit-tap-highlight-color: transparent; text-decoration: none;">${ss.name}</a></strong>`;
+        });
+      });
+    };
+
+    function searchClicked() {
+      document.querySelector('#searchInput').focus();
+      document.querySelector('nav').style.display = 'none';
+      document.querySelector('.menu-icon').innerHTML = '☰';
+    }
+
+    function submitFeedback() {
+      var q = prompt("Tell Your Query / report / feedback");
+      var name = prompt("Enter your name");
+      if (!q || !name) { return; }
+      var data = {
+        name: name,
+        q: q
+      };
+
+      fetch('/dm/admin/query', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .catch(error => {
+          console.error('There was a problem while submitting your query');
+        });
+
+    }
+    function setSelectedOption(option) {
+      document.getElementById('selectedOption').innerHTML = option + " ▼";
+    }
+
+try {
+const urlInThisCase = new URL(window.location.href);
+const route = urlInThisCase.pathname.split("/").filter(Boolean)[0];
+var knownRoute = ["movie", "anime", "webseries", "search"];
+if(knownRoute.includes(route)){
+ if(route === "movie"){
+    setSelectedOption('Movies')
+}else if(route === "anime"){
+    setSelectedOption('Anime')
+}else if(route === "webseries"){
+    setSelectedOption('Web series')
+}else if(route === "search"){
+document.querySelector(".dropdown").style.display = "none";
+}else{
+    // digdugi bajao
+}
+}else{
+// kichu korbar nai khuje paoua galo nai route ta All thak 
+}
+}catch{}
+
+//Search...
+
+let searchInputElem = document.querySelector("#searchInput");
+setInterval(() => {
+  let textToPlace = "Search...";
+  let startedInterval;
+  let nowC = 0;
+  startedInterval = setInterval(() => {
+  if(nowC === textToPlace.length){
+clearInterval(startedInterval);
+return;
+  }
+  searchInputElem.placeholder = textToPlace.substring(0, nowC);
+nowC++;
+  }, 200);
+}, 1700);
+
+setTimeout(() => {
+  let textToPlace = "Search...";
+  let startedInterval;
+  let nowC = 0;
+  startedInterval = setInterval(() => {
+  if(nowC === textToPlace.length){
+clearInterval(startedInterval);
+return;
+  }
+  searchInputElem.placeholder = textToPlace.substring(0, nowC);
+nowC++;
+  }, 200);
+}, 500);
+  </script>ipt&gt;
+
+  <div class="taremaka">
+    <!-- Trending Section -->
+    <div class="leftright-container">
+      <div style="font-size: 20px; font-weight: bold; color: #fff; margin-left: 6px; margin-top: -5px; margin-bottom: -5px;">TRENDING🔥🔥</div>
+    </div>
+    <div id="trending">
+      
+      
+      <div class="movie-container" onclick="window.location.href = '/download/Tumbbad'">
+        <img class="movie-image" src="images/R64ZBke.png" alt="Tumbbad">
+        <div class="movie-name">Tumbbad</div>
+      </div>
+      
+      <div class="movie-container" onclick="window.location.href = '/download/Thalapathy-is-the-G.O.A.T.-(The-Greatest-of-All-Time)'">
+        <img class="movie-image" src="images/AIjRems.png" alt="Thalapathy is the G.O.A.T. (The Greatest of All Time)">
+        <div class="movie-name">Thalapathy is the G.O.A.T. (The Greatest of All Time)</div>
+      </div>
+      
+      <div class="movie-container" onclick="window.location.href = '/download/Stree-2'">
+        <img class="movie-image" src="images/ES9HPXA.png" alt="Stree 2">
+        <div class="movie-name">Stree 2</div>
+      </div>
+      
+      <div class="movie-container" onclick="window.location.href = '/download/Deadpool-Wolverine'">
+        <img class="movie-image" src="images/aH2sij2.png" alt="Deadpool Wolverine">
+        <div class="movie-name">Deadpool Wolverine</div>
+      </div>
+      
+    </div>
+
+        <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Upcoming...</div>
+        </div>
+<!--         <div class="right-side">
+          <a href="/category/" class="see-all">See All</a>
+        </div> -->
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Loafer"> 
+              <img class="movie-image" src="images/XXhEjKL.png" alt="Loafer">
+            </a>
+            <div class="movie-name">Loafer</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Gargi"> 
+              <img class="movie-image" src="images/bCiWF4M.png" alt="Gargi">
+            </a>
+            <div class="movie-name">Gargi</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Oh-My-Friend"> 
+              <img class="movie-image" src="images/QrzoswV.png" alt="Oh My Friend">
+            </a>
+            <div class="movie-name">Oh My Friend</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Music-Shop-Murthy"> 
+              <img class="movie-image" src="images/SumSZVI.png" alt="Music Shop Murthy">
+            </a>
+            <div class="movie-name">Music Shop Murthy</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Thangalaan"> 
+              <img class="movie-image" src="images/7I7vizX.png" alt="Thangalaan">
+            </a>
+            <div class="movie-name">Thangalaan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Sultan"> 
+              <img class="movie-image" src="images/tv7G1Lf.png" alt="Sultan">
+            </a>
+            <div class="movie-name">Sultan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Laila-Majnu"> 
+              <img class="movie-image" src="images/J4QXWuH.png" alt="Laila Majnu">
+            </a>
+            <div class="movie-name">Laila Majnu</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+        
+    <!-- Regular Categories Section -->
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Drama</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Drama" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Ramabanam"> 
+              <img class="movie-image" src="images/Xb6tXlI.png" alt="Ramabanam">
+            </a>
+            <div class="movie-name">Ramabanam</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Thalapathy-is-the-G.O.A.T.-(The-Greatest-of-All-Time)"> 
+              <img class="movie-image" src="images/AIjRems.png" alt="Thalapathy is the G.O.A.T. (The Greatest of All Time)">
+            </a>
+            <div class="movie-name">Thalapathy is the G.O.A.T. (The Greatest of All Time)</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Mark-Antony"> 
+              <img class="movie-image" src="images/N9bPQ6f.png" alt="Mark Antony">
+            </a>
+            <div class="movie-name">Mark Antony</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Raayan"> 
+              <img class="movie-image" src="images/rpXOPb2.png" alt="Raayan">
+            </a>
+            <div class="movie-name">Raayan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Trisha-On-The-Rocks"> 
+              <img class="movie-image" src="images/2XIC8Bj.png" alt="Trisha On The Rocks">
+            </a>
+            <div class="movie-name">Trisha On The Rocks</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Aadujeevitham---The-Goat-Life"> 
+              <img class="movie-image" src="images/ODnWNU8.png" alt="Aadujeevitham - The Goat Life">
+            </a>
+            <div class="movie-name">Aadujeevitham - The Goat Life</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Maharshi"> 
+              <img class="movie-image" src="images/DlC3viZ.png" alt="Maharshi">
+            </a>
+            <div class="movie-name">Maharshi</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Harom-Hara"> 
+              <img class="movie-image" src="images/NombLtB.png" alt="Harom Hara">
+            </a>
+            <div class="movie-name">Harom Hara</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kabir-Singh"> 
+              <img class="movie-image" src="images/JuK0Gpe.png" alt="Kabir Singh">
+            </a>
+            <div class="movie-name">Kabir Singh</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Maestro"> 
+              <img class="movie-image" src="images/j2N55wj.png" alt="Maestro">
+            </a>
+            <div class="movie-name">Maestro</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Romance</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Romance" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Ghudchadi"> 
+              <img class="movie-image" src="images/pobhDQ7.png" alt="Ghudchadi">
+            </a>
+            <div class="movie-name">Ghudchadi</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Trisha-On-The-Rocks"> 
+              <img class="movie-image" src="images/2XIC8Bj.png" alt="Trisha On The Rocks">
+            </a>
+            <div class="movie-name">Trisha On The Rocks</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Bad-Newz"> 
+              <img class="movie-image" src="images/2tUoTM0.png" alt="Bad Newz">
+            </a>
+            <div class="movie-name">Bad Newz</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/The-Garden-of-Words"> 
+              <img class="movie-image" src="images/p5zkHUJ.png" alt="The Garden of Words">
+            </a>
+            <div class="movie-name">The Garden of Words</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Bharat-Ane-Nenu-(Dashing-CM-Bharat)"> 
+              <img class="movie-image" src="images/L3s1cTx.png" alt="Bharat Ane Nenu (Dashing CM Bharat)">
+            </a>
+            <div class="movie-name">Bharat Ane Nenu (Dashing CM Bharat)</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Game-on"> 
+              <img class="movie-image" src="images/NFzmrDk.png" alt="Game on">
+            </a>
+            <div class="movie-name">Game on</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Ae-Dil-Hai-Mushkil"> 
+              <img class="movie-image" src="images/19L87b8.png" alt="Ae Dil Hai Mushkil">
+            </a>
+            <div class="movie-name">Ae Dil Hai Mushkil</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tillu-Square"> 
+              <img class="movie-image" src="images/2My0U67.png" alt="Tillu Square">
+            </a>
+            <div class="movie-name">Tillu Square</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kabir-Singh"> 
+              <img class="movie-image" src="images/JuK0Gpe.png" alt="Kabir Singh">
+            </a>
+            <div class="movie-name">Kabir Singh</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Sidharth-roy"> 
+              <img class="movie-image" src="images/f60DPmt.jpeg" alt="Sidharth-roy">
+            </a>
+            <div class="movie-name">Sidharth-roy</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Action</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Action" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Captain-America:-The-First-Avenger"> 
+              <img class="movie-image" src="images/ANk2JiN.png" alt="Captain America: The First Avenger">
+            </a>
+            <div class="movie-name">Captain America: The First Avenger</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kung-Fu-Panda-4"> 
+              <img class="movie-image" src="images/puoFFgF.png" alt="Kung Fu Panda 4">
+            </a>
+            <div class="movie-name">Kung Fu Panda 4</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kabir-Singh"> 
+              <img class="movie-image" src="images/JuK0Gpe.png" alt="Kabir Singh">
+            </a>
+            <div class="movie-name">Kabir Singh</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Devil"> 
+              <img class="movie-image" src="images/4O2kUNU.png" alt="Devil">
+            </a>
+            <div class="movie-name">Devil</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Maharshi"> 
+              <img class="movie-image" src="images/DlC3viZ.png" alt="Maharshi">
+            </a>
+            <div class="movie-name">Maharshi</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kill"> 
+              <img class="movie-image" src="images/BdM1cud.png" alt="Kill">
+            </a>
+            <div class="movie-name">Kill</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Leo"> 
+              <img class="movie-image" src="images/UmNzr54.png" alt="Leo">
+            </a>
+            <div class="movie-name">Leo</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Double-iSmart"> 
+              <img class="movie-image" src="images/L0os3zG.png" alt="Double iSmart">
+            </a>
+            <div class="movie-name">Double iSmart</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Hotel-Mumbai"> 
+              <img class="movie-image" src="images/TjkpEtC.png" alt="Hotel Mumbai">
+            </a>
+            <div class="movie-name">Hotel Mumbai</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Thalapathy-is-the-G.O.A.T.-(The-Greatest-of-All-Time)"> 
+              <img class="movie-image" src="images/AIjRems.png" alt="Thalapathy is the G.O.A.T. (The Greatest of All Time)">
+            </a>
+            <div class="movie-name">Thalapathy is the G.O.A.T. (The Greatest of All Time)</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Crime</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Crime" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Kanjoos-Makhichoos"> 
+              <img class="movie-image" src="images/xCEFv4b.png" alt="Kanjoos Makhichoos">
+            </a>
+            <div class="movie-name">Kanjoos Makhichoos</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Satyabhama"> 
+              <img class="movie-image" src="images/f6G58KK.png" alt="Satyabhama">
+            </a>
+            <div class="movie-name">Satyabhama</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Mirzapur-S03"> 
+              <img class="movie-image" src="images/I2zotuE.png" alt="Mirzapur S03">
+            </a>
+            <div class="movie-name">Mirzapur S03</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tiger-Nageswara-Rao"> 
+              <img class="movie-image" src="images/qbR7XFI.png" alt="Tiger Nageswara Rao">
+            </a>
+            <div class="movie-name">Tiger Nageswara Rao</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Mirzapur-S01"> 
+              <img class="movie-image" src="images/eLevlRm.png" alt="Mirzapur S01">
+            </a>
+            <div class="movie-name">Mirzapur S01</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tillu-Square"> 
+              <img class="movie-image" src="images/2My0U67.png" alt="Tillu Square">
+            </a>
+            <div class="movie-name">Tillu Square</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Silence-2--The-Night-Owl-Bar-Shootout"> 
+              <img class="movie-image" src="images/ypKgssM.png" alt="Silence 2 -The Night Owl Bar Shootout">
+            </a>
+            <div class="movie-name">Silence 2 -The Night Owl Bar Shootout</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Operation-Java"> 
+              <img class="movie-image" src="images/YOJriUj.png" alt="Operation Java">
+            </a>
+            <div class="movie-name">Operation Java</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Savi-(Tum-Hi-Ho)"> 
+              <img class="movie-image" src="images/ESyAEVY.png" alt="Savi (Tum Hi Ho)">
+            </a>
+            <div class="movie-name">Savi (Tum Hi Ho)</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Animal"> 
+              <img class="movie-image" src="images/uVgEWUL.png" alt="Animal">
+            </a>
+            <div class="movie-name">Animal</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Thriller</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Thriller" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Dhruva"> 
+              <img class="movie-image" src="images/9nGqW6U.png" alt="Dhruva">
+            </a>
+            <div class="movie-name">Dhruva</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Hotel-Mumbai"> 
+              <img class="movie-image" src="images/TjkpEtC.png" alt="Hotel Mumbai">
+            </a>
+            <div class="movie-name">Hotel Mumbai</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/IB71"> 
+              <img class="movie-image" src="images/Xca0pb9.png" alt="IB71">
+            </a>
+            <div class="movie-name">IB71</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Pathu-Thala"> 
+              <img class="movie-image" src="images/EWBLamg.png" alt="Pathu Thala">
+            </a>
+            <div class="movie-name">Pathu Thala</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/K.G.F-Chapter-1"> 
+              <img class="movie-image" src="images/P3H0MJt.png" alt="K.G.F Chapter 1">
+            </a>
+            <div class="movie-name">K.G.F Chapter 1</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Devil"> 
+              <img class="movie-image" src="images/4O2kUNU.png" alt="Devil">
+            </a>
+            <div class="movie-name">Devil</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Leo"> 
+              <img class="movie-image" src="images/UmNzr54.png" alt="Leo">
+            </a>
+            <div class="movie-name">Leo</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Savi-(Tum-Hi-Ho)"> 
+              <img class="movie-image" src="images/ESyAEVY.png" alt="Savi (Tum Hi Ho)">
+            </a>
+            <div class="movie-name">Savi (Tum Hi Ho)</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tumbbad"> 
+              <img class="movie-image" src="images/R64ZBke.png" alt="Tumbbad">
+            </a>
+            <div class="movie-name">Tumbbad</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kalki"> 
+              <img class="movie-image" src="images/MVMybYQ.png" alt="Kalki">
+            </a>
+            <div class="movie-name">Kalki</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Science-Fiction</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Science-Fiction" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Allegiant"> 
+              <img class="movie-image" src="images/4S5xEzY.png" alt="Allegiant">
+            </a>
+            <div class="movie-name">Allegiant</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Double-iSmart"> 
+              <img class="movie-image" src="images/L0os3zG.png" alt="Double iSmart">
+            </a>
+            <div class="movie-name">Double iSmart</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kalki"> 
+              <img class="movie-image" src="images/MVMybYQ.png" alt="Kalki">
+            </a>
+            <div class="movie-name">Kalki</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Godzilla-x-Kong--The-New-Empire"> 
+              <img class="movie-image" src="images/PxMZd4D.png" alt="Godzilla x Kong- The New Empire">
+            </a>
+            <div class="movie-name">Godzilla x Kong- The New Empire</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kingdom-of-the-Planet-of-the-Apes"> 
+              <img class="movie-image" src="images/r7lSI7K.png" alt="Kingdom of the Planet of the Apes">
+            </a>
+            <div class="movie-name">Kingdom of the Planet of the Apes</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Jurassic-World-Dominion"> 
+              <img class="movie-image" src="images/0FxN3Ig.png" alt="Jurassic World Dominion">
+            </a>
+            <div class="movie-name">Jurassic World Dominion</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Insurgent"> 
+              <img class="movie-image" src="images/kB1KLb7.png" alt="Insurgent">
+            </a>
+            <div class="movie-name">Insurgent</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/B--B-Bujji-and-Bhairava-Season-1"> 
+              <img class="movie-image" src="images/xuxx42j.png" alt="B  B Bujji and Bhairava Season 1">
+            </a>
+            <div class="movie-name">B  B Bujji and Bhairava Season 1</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Thalapathy-is-the-G.O.A.T.-(The-Greatest-of-All-Time)"> 
+              <img class="movie-image" src="images/AIjRems.png" alt="Thalapathy is the G.O.A.T. (The Greatest of All Time)">
+            </a>
+            <div class="movie-name">Thalapathy is the G.O.A.T. (The Greatest of All Time)</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Teri-Baaton-Mein-Aisa-Uljha-Jiya"> 
+              <img class="movie-image" src="images/4uRU5xk.png" alt="Teri Baaton Mein Aisa Uljha Jiya">
+            </a>
+            <div class="movie-name">Teri Baaton Mein Aisa Uljha Jiya</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Biography</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Biography" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Sam-Bahadur"> 
+              <img class="movie-image" src="images/mVG9IeN.png" alt="Sam Bahadur">
+            </a>
+            <div class="movie-name">Sam Bahadur</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Chandu-Champion"> 
+              <img class="movie-image" src="images/iO6GJJn.png" alt="Chandu Champion">
+            </a>
+            <div class="movie-name">Chandu Champion</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Swatantra-Veer-Savarkar"> 
+              <img class="movie-image" src="images/deO1wVm.png" alt="Swatantra Veer Savarkar">
+            </a>
+            <div class="movie-name">Swatantra Veer Savarkar</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Srikanth"> 
+              <img class="movie-image" src="images/Kbl0Rix.png" alt="Srikanth">
+            </a>
+            <div class="movie-name">Srikanth</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tiger-Nageswara-Rao"> 
+              <img class="movie-image" src="images/qbR7XFI.png" alt="Tiger Nageswara Rao">
+            </a>
+            <div class="movie-name">Tiger Nageswara Rao</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Mission-Raniganj"> 
+              <img class="movie-image" src="images/ofmJbWX.png" alt="Mission Raniganj">
+            </a>
+            <div class="movie-name">Mission Raniganj</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Comedy</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Comedy" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/OMG-2"> 
+              <img class="movie-image" src="images/9K1RgSr.png" alt="OMG 2">
+            </a>
+            <div class="movie-name">OMG 2</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kung-Fu-Panda-4"> 
+              <img class="movie-image" src="images/puoFFgF.png" alt="Kung Fu Panda 4">
+            </a>
+            <div class="movie-name">Kung Fu Panda 4</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Deadpool-Wolverine"> 
+              <img class="movie-image" src="images/aH2sij2.png" alt="Deadpool Wolverine">
+            </a>
+            <div class="movie-name">Deadpool Wolverine</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Maestro"> 
+              <img class="movie-image" src="images/j2N55wj.png" alt="Maestro">
+            </a>
+            <div class="movie-name">Maestro</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Annabelle-Sethupathi"> 
+              <img class="movie-image" src="images/JNZDlbD.png" alt="Annabelle Sethupathi">
+            </a>
+            <div class="movie-name">Annabelle Sethupathi</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Conjuring-Kannappan"> 
+              <img class="movie-image" src="images/4y1o5dT.png" alt="Conjuring Kannappan">
+            </a>
+            <div class="movie-name">Conjuring Kannappan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Stree"> 
+              <img class="movie-image" src="images/jRzKyI6.png" alt="Stree">
+            </a>
+            <div class="movie-name">Stree</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tillu-Square"> 
+              <img class="movie-image" src="images/2My0U67.png" alt="Tillu Square">
+            </a>
+            <div class="movie-name">Tillu Square</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Aavesham"> 
+              <img class="movie-image" src="images/pcCK491.png" alt="Aavesham">
+            </a>
+            <div class="movie-name">Aavesham</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Trisha-On-The-Rocks"> 
+              <img class="movie-image" src="images/2XIC8Bj.png" alt="Trisha On The Rocks">
+            </a>
+            <div class="movie-name">Trisha On The Rocks</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Mystery</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Mystery" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Hacked"> 
+              <img class="movie-image" src="images/A7NWUeS.png" alt="Hacked">
+            </a>
+            <div class="movie-name">Hacked</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Jaane-Jaan"> 
+              <img class="movie-image" src="images/80j8C3m.png" alt="Jaane Jaan">
+            </a>
+            <div class="movie-name">Jaane Jaan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Freddy"> 
+              <img class="movie-image" src="images/cQoYWcp.png" alt="Freddy">
+            </a>
+            <div class="movie-name">Freddy</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Afwaah"> 
+              <img class="movie-image" src="images/pa8pl4I.png" alt="Afwaah">
+            </a>
+            <div class="movie-name">Afwaah</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Bulbbul"> 
+              <img class="movie-image" src="images/nzrKUwt.png" alt="Bulbbul">
+            </a>
+            <div class="movie-name">Bulbbul</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/U-Turn"> 
+              <img class="movie-image" src="images/CxZlxmr.png" alt="U Turn">
+            </a>
+            <div class="movie-name">U Turn</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/House-of-Lies"> 
+              <img class="movie-image" src="images/jKjwM52.png" alt="House of Lies">
+            </a>
+            <div class="movie-name">House of Lies</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Neeyat"> 
+              <img class="movie-image" src="images/LuHBrg7.png" alt="Neeyat">
+            </a>
+            <div class="movie-name">Neeyat</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Gadera"> 
+              <img class="movie-image" src="images/k9QbfEl.png" alt="Gadera">
+            </a>
+            <div class="movie-name">Gadera</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Siren-108"> 
+              <img class="movie-image" src="images/xIOjeQs.png" alt="Siren 108">
+            </a>
+            <div class="movie-name">Siren 108</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Family</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Family" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Anni-Manchi-Sakunamule"> 
+              <img class="movie-image" src="images/kdkA3aT.png" alt="Anni Manchi Sakunamule">
+            </a>
+            <div class="movie-name">Anni Manchi Sakunamule</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Rocky-Aur-Rani-Kii-Prem-Kahaani"> 
+              <img class="movie-image" src="images/Oe5hAOD.png" alt="Rocky Aur Rani Kii Prem Kahaani">
+            </a>
+            <div class="movie-name">Rocky Aur Rani Kii Prem Kahaani</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Luv-Ki-Arrange-Marriage"> 
+              <img class="movie-image" src="images/LhuVmBF.png" alt="Luv Ki Arrange Marriage">
+            </a>
+            <div class="movie-name">Luv Ki Arrange Marriage</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/The-Family-Star"> 
+              <img class="movie-image" src="images/PbYbrkR.png" alt="The Family Star">
+            </a>
+            <div class="movie-name">The Family Star</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Friday-Night-Plan"> 
+              <img class="movie-image" src="images/3RubYdc.png" alt="Friday Night Plan">
+            </a>
+            <div class="movie-name">Friday Night Plan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Aadavallu-Meeku-Johaarlu-(Ghar-ki-Laxmi)"> 
+              <img class="movie-image" src="images/h606wZu.png" alt="Aadavallu Meeku Johaarlu (Ghar ki Laxmi)">
+            </a>
+            <div class="movie-name">Aadavallu Meeku Johaarlu (Ghar ki Laxmi)</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Goodbye"> 
+              <img class="movie-image" src="images/qNynpqw.png" alt="Goodbye">
+            </a>
+            <div class="movie-name">Goodbye</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/IF"> 
+              <img class="movie-image" src="images/0VRQecZ.png" alt="IF">
+            </a>
+            <div class="movie-name">IF</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Adventure</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Adventure" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Divergent"> 
+              <img class="movie-image" src="images/9bhOzDJ.png" alt="Divergent">
+            </a>
+            <div class="movie-name">Divergent</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Chhota-Bheem-and-the-Curse-of-Damyaan"> 
+              <img class="movie-image" src="images/IBR5bsx.png" alt="Chhota Bheem and the Curse of Damyaan">
+            </a>
+            <div class="movie-name">Chhota Bheem and the Curse of Damyaan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/The-Legend-of-Hanuman-S04"> 
+              <img class="movie-image" src="images/eWS6wle.png" alt="The Legend of Hanuman S04">
+            </a>
+            <div class="movie-name">The Legend of Hanuman S04</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Baahubali---Crown-of-Blood"> 
+              <img class="movie-image" src="images/VKPEKRj.png" alt="Baahubali - Crown of Blood">
+            </a>
+            <div class="movie-name">Baahubali - Crown of Blood</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kalki"> 
+              <img class="movie-image" src="images/MVMybYQ.png" alt="Kalki">
+            </a>
+            <div class="movie-name">Kalki</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Hanu-Man"> 
+              <img class="movie-image" src="images/35RPo0g.png" alt="Hanu-Man">
+            </a>
+            <div class="movie-name">Hanu-Man</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Jujutsu-kaisen"> 
+              <img class="movie-image" src="images/MKpUab8.png" alt="Jujutsu kaisen">
+            </a>
+            <div class="movie-name">Jujutsu kaisen</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kung-Fu-Panda-4"> 
+              <img class="movie-image" src="images/puoFFgF.png" alt="Kung Fu Panda 4">
+            </a>
+            <div class="movie-name">Kung Fu Panda 4</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Avatar-The-Way-of-Water"> 
+              <img class="movie-image" src="images/TjEiH6a.png" alt="Avatar The Way of Water">
+            </a>
+            <div class="movie-name">Avatar The Way of Water</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/B--B-Bujji-and-Bhairava-Season-1"> 
+              <img class="movie-image" src="images/xuxx42j.png" alt="B  B Bujji and Bhairava Season 1">
+            </a>
+            <div class="movie-name">B  B Bujji and Bhairava Season 1</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Fantasy</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Fantasy" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Ghostbusters:-Frozen-Empire"> 
+              <img class="movie-image" src="images/TtXJnpz.png" alt="Ghostbusters: Frozen Empire">
+            </a>
+            <div class="movie-name">Ghostbusters: Frozen Empire</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Jaadugar"> 
+              <img class="movie-image" src="images/zdjh4qr.png" alt="Jaadugar">
+            </a>
+            <div class="movie-name">Jaadugar</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Lakadbaggha"> 
+              <img class="movie-image" src="images/CmuQvXp.png" alt="Lakadbaggha">
+            </a>
+            <div class="movie-name">Lakadbaggha</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Chhota-Bheem-and-the-Curse-of-Damyaan"> 
+              <img class="movie-image" src="images/IBR5bsx.png" alt="Chhota Bheem and the Curse of Damyaan">
+            </a>
+            <div class="movie-name">Chhota Bheem and the Curse of Damyaan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Hanu-Man"> 
+              <img class="movie-image" src="images/35RPo0g.png" alt="Hanu-Man">
+            </a>
+            <div class="movie-name">Hanu-Man</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Weathering-with-You"> 
+              <img class="movie-image" src="images/At2uXVp.png" alt="Weathering with You">
+            </a>
+            <div class="movie-name">Weathering with You</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Aquaman-and-the-Lost-Kingdom"> 
+              <img class="movie-image" src="images/6tN9K4I.png" alt="Aquaman and the Lost Kingdom">
+            </a>
+            <div class="movie-name">Aquaman and the Lost Kingdom</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Kedarnath"> 
+              <img class="movie-image" src="images/1fq0AMq.png" alt="Kedarnath">
+            </a>
+            <div class="movie-name">Kedarnath</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/The-Legend-of-Hanuman-S04"> 
+              <img class="movie-image" src="images/eWS6wle.png" alt="The Legend of Hanuman S04">
+            </a>
+            <div class="movie-name">The Legend of Hanuman S04</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tantiram"> 
+              <img class="movie-image" src="images/IfICkWh.png" alt="Tantiram">
+            </a>
+            <div class="movie-name">Tantiram</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Horror</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Horror" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Stree-2"> 
+              <img class="movie-image" src="images/ES9HPXA.png" alt="Stree 2">
+            </a>
+            <div class="movie-name">Stree 2</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Laxmii"> 
+              <img class="movie-image" src="images/WtYRDl8.png" alt="Laxmii">
+            </a>
+            <div class="movie-name">Laxmii</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Dhootha-S1"> 
+              <img class="movie-image" src="images/KA3lbiY.png" alt="Dhootha S1">
+            </a>
+            <div class="movie-name">Dhootha S1</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Bulbbul"> 
+              <img class="movie-image" src="images/nzrKUwt.png" alt="Bulbbul">
+            </a>
+            <div class="movie-name">Bulbbul</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Echo"> 
+              <img class="movie-image" src="images/iIChqU3.png" alt="Echo">
+            </a>
+            <div class="movie-name">Echo</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tumbbad"> 
+              <img class="movie-image" src="images/R64ZBke.png" alt="Tumbbad">
+            </a>
+            <div class="movie-name">Tumbbad</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Aseq"> 
+              <img class="movie-image" src="images/siprEZk.png" alt="Aseq">
+            </a>
+            <div class="movie-name">Aseq</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Munjya"> 
+              <img class="movie-image" src="images/OJ5mVzb.png" alt="Munjya">
+            </a>
+            <div class="movie-name">Munjya</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Bramayugam"> 
+              <img class="movie-image" src="images/OSAuaE0.png" alt="Bramayugam">
+            </a>
+            <div class="movie-name">Bramayugam</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Annabelle-Sethupathi"> 
+              <img class="movie-image" src="images/JNZDlbD.png" alt="Annabelle Sethupathi">
+            </a>
+            <div class="movie-name">Annabelle Sethupathi</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Historical</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Historical" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Pippa"> 
+              <img class="movie-image" src="images/CiCU45R.png" alt="Pippa">
+            </a>
+            <div class="movie-name">Pippa</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Maidaan"> 
+              <img class="movie-image" src="images/b1UnQqH.png" alt="Maidaan">
+            </a>
+            <div class="movie-name">Maidaan</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Heeramandi---The-Diamond-Bazaar-S01"> 
+              <img class="movie-image" src="images/fj0Zs9H.png" alt="Heeramandi - The Diamond Bazaar S01">
+            </a>
+            <div class="movie-name">Heeramandi - The Diamond Bazaar S01</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">War</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/War" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Baahubali"> 
+              <img class="movie-image" src="images/2uWqw8g.png" alt="Baahubali">
+            </a>
+            <div class="movie-name">Baahubali</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Tejas"> 
+              <img class="movie-image" src="images/ufiZ6iZ.png" alt="Tejas">
+            </a>
+            <div class="movie-name">Tejas</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Baahubali-2---The-Conclusion"> 
+              <img class="movie-image" src="images/zcvG1C0.png" alt="Baahubali 2 - The Conclusion">
+            </a>
+            <div class="movie-name">Baahubali 2 - The Conclusion</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Superhero</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Superhero" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Deadpool"> 
+              <img class="movie-image" src="images/yeaoVce.png" alt="Deadpool">
+            </a>
+            <div class="movie-name">Deadpool</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Deadpool-2"> 
+              <img class="movie-image" src="images/6YMQ1R5.png" alt="Deadpool 2">
+            </a>
+            <div class="movie-name">Deadpool 2</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/The-Boys-S01"> 
+              <img class="movie-image" src="images/ybM9AqE.png" alt="The Boys S01">
+            </a>
+            <div class="movie-name">The Boys S01</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/The-Boys-S02"> 
+              <img class="movie-image" src="images/62S23Fg.png" alt="The Boys S02">
+            </a>
+            <div class="movie-name">The Boys S02</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/The-Boys-S3"> 
+              <img class="movie-image" src="images/WSinoXn.png" alt="The Boys S3">
+            </a>
+            <div class="movie-name">The Boys S3</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/The-Boys-S04"> 
+              <img class="movie-image" src="images/83xGJq7.png" alt="The Boys S04">
+            </a>
+            <div class="movie-name">The Boys S04</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Aquaman-and-the-Lost-Kingdom"> 
+              <img class="movie-image" src="images/6tN9K4I.png" alt="Aquaman and the Lost Kingdom">
+            </a>
+            <div class="movie-name">Aquaman and the Lost Kingdom</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Deadpool-Wolverine"> 
+              <img class="movie-image" src="images/aH2sij2.png" alt="Deadpool Wolverine">
+            </a>
+            <div class="movie-name">Deadpool Wolverine</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Iron-Man"> 
+              <img class="movie-image" src="images/7WYQE2C.png" alt="Iron Man">
+            </a>
+            <div class="movie-name">Iron Man</div>
+          </div>
+            
+          <div class="movie-container">
+            <a href="/download/Captain-America:-The-First-Avenger"> 
+              <img class="movie-image" src="images/ANk2JiN.png" alt="Captain America: The First Avenger">
+            </a>
+            <div class="movie-name">Captain America: The First Avenger</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <main>
+      <div class="leftright-container">
+        <div class="left-side">
+          <div class="section-title">Musical</div>
+        </div>
+        <div class="right-side">
+          <a href="/category/Musical" class="see-all">See All</a>
+        </div>
+      </div>
+      <div class="new-section">
+        <div class="movies-container">
+            
+          <div class="movie-container">
+            <a href="/download/Ae-Dil-Hai-Mushkil"> 
+              <img class="movie-image" src="images/19L87b8.png" alt="Ae Dil Hai Mushkil">
+            </a>
+            <div class="movie-name">Ae Dil Hai Mushkil</div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    
+    <style>[class~=footer]{background-color:#202020;}.footer-logo img,[class~=footer]{width:100%;}[class~=footer-links] a,[class~=social-icon],[class~=footer]{color:#fff;}[class~=footer]{padding-left:0;}[class~=footer]{padding-bottom:.104166667in;}[class~=footer]{padding-right:0;}[class~=footer]{padding-top:.104166667in;}[class~=footer]{text-align:center;}.footer-logo img{max-width:1.041666667in;}[class~=footer]{display:block;}[class~=footer]{bottom:0;}[class~=footer]{margin-bottom:0px;}[class~=footer]{border-top-width:1px;}.footer-logo img{border-radius:.5pc;}[class~=footer]{border-top-style:solid;}[class~=footer]{border-top-color:gray;}[class~=footer]{border-image:none;}[class~=footer-content]{display:flex;}[class~=footer-links] a,[class~=social-icon]{text-decoration:none;}[class~=footer-content]{flex-wrap:wrap;}[class~=footer-content]{justify-content:center;}[class~=footer-content]{align-items:center;}[class~=social-icon],[class~=footer-links] a{margin-left:.104166667in;}[class~=footer-links],[class~=footer-logo],[class~=footer-social]{flex-basis:100%;}[class~=footer-social],[class~=footer-links],[class~=footer-logo]{margin-bottom:7.5pt;}[class~=social-icon],[class~=footer-links] a{margin-bottom:0;}[class~=footer-links] a,[class~=social-icon]{margin-right:.625pc;}[class~=footer-links] a:hover,.social-icon:hover{color:#e50914;}[class~=social-icon],[class~=footer-links] a{margin-top:0;}[class~=social-icon]{font-size:1.125pc;}[class~=footer-links] a{font-size:12px;}[class~=social-icon],[class~=footer-links] a{transition:color .3s ease;}@media (min-width: 768px){[class~=footer-content]{justify-content:space-between;}[class~=footer-links],.footer-copyright,[class~=footer-social],.footer-logo{flex-basis:calc(25% - 10px);}.footer-copyright,[class~=footer-social],[class~=footer-links],.footer-logo{margin-left:0;}.footer-copyright,[class~=footer-social],.footer-logo,[class~=footer-links]{margin-bottom:0;}.footer-logo,[class~=footer-links],.footer-copyright,
+[class~=footer-social]{margin-right:0;}[class~=footer-links],[class~=footer-social],.footer-copyright,.footer-logo{margin-top:0;}}.footer-copyright{flex-basis:100%;}.footer-copyright{margin-top:7.5pt;}.footer-copyright{font-size:.125in;}</style><div class="footer"><div class="footer-content"><div class="footer-logo"><img src="images/android-chrome-192x192.png" alt="Your Logo"></div><div class="footer-links"><a href="/">Home</a><a href="/about-us">About Us</a><a href="/contact-us">Contact Us</a><a href="/privacy-policy">Privacy Policy</a></div><div class="footer-social"><a href="https://www.facebook.com/profile.php?id=61553870814138&amp;mibextid=ZbWKwL" class="social-icon"><i><svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5" viewBox="0 0 512 512"><path fill="#2b79ff" d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"></path></svg></i></a><a href="mailto:noreply.memer797@gmail.com" class="social-icon"><i><svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5" viewBox="0 0 512 512"><path fill="#40e000" d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"></path></svg></i></a><a href="https://www.instagram.com/memer797_official?igsh=NG5sdmpsdDI5NnZm" class="social-icon">
+<i><svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5" viewBox="0 0 448 512"><path fill="#ff45da" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></i></a><a href="https://t.me/memer797massager" class="social-icon" target="_blank"><i><svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5" viewBox="0 0 496 512"><path fill="#42affc" d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"></path></svg></i></a><a href="https://www.youtube.com/YOUR_CHANNEL_URL" class="social-icon" target="_blank"><i><svg xmlns="http://www.w3.org/2000/svg" height="20" width="22.5" viewBox="0 0 576 512">
+<path fill="#ff3030" d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"></path></svg></i></a></div><div class="footer-copyright"><p>© 2024 movies74u. All rights reserved.</p></div></div></div>
+
+  </div>
+  
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#trending').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+        arrows: false
+      });
+    });
+  </script>
+
+
+</body></html>
