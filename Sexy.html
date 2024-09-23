@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>VideoHB</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="theme-color" content="#FFF">
+<link rel="apple-touch-icon" href="/static/images/favicon/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/static/images/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="/static/images/favicon/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/static/images/favicon/manifest.json">
+<link rel="icon" href="/static/images/favicon/favicon.ico">
+
+
+<style type="text/css">@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/400/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:400;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/400/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:500;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/500/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:500;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/500/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:500;src:url(/cf-fonts/s/poppins/5.0.11/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/latin/700/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/devanagari/700/normal.woff2);unicode-range:U+0900-097F,U+1CD0-1CF9,U+200C-200D,U+20A8,U+20B9,U+25CC,U+A830-A839,U+A8E0-A8FF;font-display:swap;}@font-face {font-family:Poppins;font-style:normal;font-weight:700;src:url(/cf-fonts/s/poppins/5.0.11/latin-ext/700/normal.woff2);unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+<link href="/static/css/style.css?13" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" type="32fea42bb5bd1dc22a8527af-text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" type="32fea42bb5bd1dc22a8527af-text/javascript"></script>
+<script src="/static/js/app.js?3" type="32fea42bb5bd1dc22a8527af-text/javascript"></script>
+<script src="/static/js/xupload.js?10" type="32fea42bb5bd1dc22a8527af-text/javascript"></script>
+<meta name="ppck-ver" content="60dd4f1074f49ab0b082aa8fda66bfb0" />
+</head>
+<body class>
+<header class="header">
+<div class="container">
+<div class="row align-items-center flex-nowrap">
+<div class="col-auto flex-grow-1 flex-shrink-1">
+<div class="row align-items-center">
+<div class="col-auto d-lg-none">
+<div class="dropdown">
+<button class="btn icon-btn" data-bs-toggle="dropdown" data-bs-offset="0, 16">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14">
+<path fill-rule="evenodd" fill="currentcolor" d="M17 8H1a1 1 0 1 1 0-2h16a1 1 0 1 1 0 2Zm0-6H1a1 1 0 0 1 0-2h16a1 1 0 1 1 0 2ZM1 12h16a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2Z" />
+</svg>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<a href="/upload" class="dropdown-item">Upload</a>
+<a href="/premium" class="dropdown-item">Premium</a>
+<a href="/make_money" class="dropdown-item">Earn Money</a>
+<a href="/api" class="dropdown-item">Service API</a>
+<a href="/tos" class="dropdown-item">Terms of Service</a>
+<a href="/faq" class="dropdown-item">About us</a>
+<a href="/contact" class="dropdown-item">Contacts</a>
+<a href="/checkfiles" class="dropdown-item">Link Checker</a>
+</ul>
+</div>
+</div>
+<div class="col-auto">
+<a href="/" class="logo">
+<img src="/static/images/logo2.svg" alt>
+</a>
+</div>
+<div class="col-auto d-none d-lg-block">
+<nav class="nav">
+<a href="/make_money" class="nav-link">Earn Money</a>
+<a href="/premium" class="nav-link">Premium</a>
+<a href="/api" class="nav-link">Api Docs</a>
+</nav>
+</div>
+</div>
+</div>
+<div class="col-auto d-none d-lg-block">
+<a href="/login" class="btn login-btn me-1">Login</a>
+<a href="/?op=registration" class="btn btn-gradient reg-btn">Register</a>
+</div>
+<div class="col-auto d-lg-none">
+<div class="dropdown">
+<button class="btn icon-btn" data-bs-toggle="dropdown" data-bs-offset="0, 16">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+<path fill-rule="evenodd" fill="currentcolor" d="M16.525 17.561c-.032.032-.062.063-.099.09A9.953 9.953 0 0 1 10 20a9.947 9.947 0 0 1-6.448-2.369c-.018-.014-.032-.029-.048-.043A9.976 9.976 0 0 1 0 10C0 4.486 4.486 0 10 0s10 4.486 10 10c0 3.02-1.351 5.726-3.475 7.561Zm-1.92-1.03A3.013 3.013 0 0 0 12.002 15H7.998a2.972 2.972 0 0 0-2.606 1.529 7.952 7.952 0 0 0 9.213.002ZM10 2c-4.411 0-8 3.589-8 8a7.96 7.96 0 0 0 1.889 5.151A4.962 4.962 0 0 1 7.998 13h4.005c1.657 0 3.184.84 4.103 2.157A7.962 7.962 0 0 0 18 10c0-4.411-3.589-8-8-8Zm0 10c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4Zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2Z" />
+</svg>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li>
+<a class="dropdown-item" href="/login">Login</a>
+</li>
+<li>
+<a class="dropdown-item" href="/?op=registration">Register</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main>
+<div class="container">
+<section class="section">
+<center>
+<div class="down-container">
+<h3 class="mb-5 text-center text-white">
+Download File
+</h3>
+<Form method="POST" id="F1" action>
+<input type="hidden" name="op" value="download_orig">
+<input type="hidden" name="id" value="t7myd1knn536">
+<input type="hidden" name="mode" value="h">
+<input type="hidden" name="hash" value="55211-106-77-1727074780-98612eb8b884eaed25a2f947ac521a56">
+<button class=" btn btn-gradient submit-btn justify-content-start flex-nowrap" style="height:64px;">
+<div class="button-inner" style="display: none;">
+<div class="row align-items-center flex-nowrap">
+<div class="col-auto pe-0">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill-rule="evenodd" fill="currentColor" d="M10 20C4.486 20 0 15.514 0 10S4.486 0 10 0s10 4.486 10 10-4.486 10-10 10Zm0-18c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8Zm0 13h-.003a.988.988 0 0 1-.704-.293l-3-3a.999.999 0 1 1 1.414-1.414L9 11.586V6a1 1 0 0 1 2 0v5.586l1.293-1.293a.999.999 0 1 1 1.414 1.414l-3 3a.993.993 0 0 1-.704.293H10Z" /></svg>
+</div>
+<div class="col-auto">
+<b>Dhokha EP1 - Videohb-net.mp4</b>
+</div>
+<div class="col-auto ms-auto">
+<small class="opacity-2">
+408.8 MB
+</small>
+</div>
+</div>
+</div>
+<div class="status">
+<div class="d-flex aling-items-center">
+<div class="spinner-border text-white me-2" style="font-size: 12px;width: 24px;height: 24px;" role="status"></div> Loading...
+</div>
+</div>
+</button>
+</Form>
+</div>
+</center>
+</section>
+</div>
+<style media="screen">
+
+		.button-inner b {
+			font-weight: 500; display: block;max-width: 260px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+		}
+		@media(max-width:767px){
+			.button-inner b {
+				max-width: 180px;
+			}
+
+		}
+	</style>
+<noscript>
+		<style media="screen">
+			.button-inner {
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+			}
+			.status {
+				display: none;
+			}
+		</style>
+	</noscript>
+<script type="32fea42bb5bd1dc22a8527af-text/javascript">
+		setTimeout(() => {
+		  $('.status').hide();
+			$('.button-inner').css({'display': 'flex'})
+		}, 1000);
+	</script>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 d-flex flex-column justify-content-between">
+<div class="mb-3">
+<a href="#" class="logo">
+<img src="/static/images/logo2.svg" alt>
+</a>
+</div>
+<p class="text-muted">© 2024 VideoHB. <br> All rights reserved.</p>
+</div>
+<div class="col-lg-3">
+<div class="nav flex-column mb-2">
+<a href="/tos" class="nav-link">Terms of service</a>
+<a href="/api" class="nav-link">API Documentation</a>
+<a href="/faq" class="nav-link">FAQ</a>
+<a href="/contact" class="nav-link">Contact Us</a>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="nav flex-column mb-2">
+<a href="/premium" class="nav-link">Premium</a>
+<a href="/make_money" class="nav-link">Earn money</a>
+<a href="/checkfiles" class="nav-link">Link Checker</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="32fea42bb5bd1dc22a8527af-|49" defer></script>
